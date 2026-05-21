@@ -24,7 +24,7 @@ public class App {
         inteiros2.add(-10);
         inteiros2.add(100);
 
-        System.out.println("disjoint: " + ((Collections.disjoint(inteiros, inteiros2)) ? "tem elementos em comum"
+        System.out.println("disjoint: " + (Collections.disjoint(inteiros, inteiros2) ? "tem elementos em comum"
                 : "não tem elementos em comum"));
 
         inteiros2.add(100);
@@ -36,7 +36,13 @@ public class App {
         // 100 aparece
         // no arraylist
 
-        
+        System.out.println("O maior valor em 'inteiros2' é: " + Collections.max(inteiros2) + "\nE o menor valor é: "
+                + Collections.min(inteiros2));
 
+        System.out.println("Inteiros2 ao contrário: " + inteiros2);
+        Collections.reverse(inteiros2);
+        System.out.println("Inteiros2 ao contrário: " + inteiros2);
+
+        
     }
 }
