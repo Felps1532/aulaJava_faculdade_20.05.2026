@@ -20,31 +20,21 @@ public class App2 {
                 System.out.println("Collections.binarySearch(Carla) : " +
                                 Collections.binarySearch(nomes, "Carla"));
 
-                ArrayList<Integer> nomes2 = new ArrayList<>();
-                nomes.add("Mariana");
-                nomes.add("Andréia");
-                nomes.add("Carlos");
-                nomes.add("Miguel");
-                nomes.add("Paulo");
+                ArrayList<String> nomes2 = new ArrayList<>();
+                nomes2.add("Mariana");
+                nomes2.add("Andréia");
+                nomes2.add("Carlos");
+                nomes2.add("Miguel");
+                nomes2.add("Paulo");
 
-                // System.out.println("disjoint: " + (Collections.disjoint(nomes, inteiros2) ?
-                // "tem elementos em comum"
-                // : "não tem elementos em comum"));
+                nomes2.add("Mariana");
+                System.out.println("Frequência 'Mariana': " + Collections.frequency(nomes2, "Mariana"));
 
-                // inteiros2.add(100);
+                System.out.println("Maior valor de 'nomes2': " + Collections.max(nomes2));
+                System.out.println("Menor valor de 'nomes2': " + Collections.min(nomes2));
 
-                // System.out.println(
-                // "Exibindo frequência do valor 100 no segundo arraylist: "
-                // + Collections.frequency(inteiros2, 100));
-
-                // System.out.println("O maior valor em 'inteiros2' é: " +
-                // Collections.max(inteiros2)
-                // + "\nE o menor valor é: "
-                // + Collections.min(inteiros2));
-
-                // System.out.println("Inteiros2 ao contrário: " + inteiros2);
-                // Collections.reverse(inteiros2);
-                // System.out.println("Inteiros2 ao contrário: " + inteiros2);
+                Collections.reverse(nomes2);
+                System.out.println("'nomes2' invertido: " + nomes2);
 
         }
 }
