@@ -35,6 +35,5 @@ public class App2 {
 
                 Collections.reverse(nomes2);
                 System.out.println("'nomes2' invertido: " + nomes2);
-
         }
 }
