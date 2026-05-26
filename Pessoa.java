@@ -1,4 +1,4 @@
-public class Pessoa {
+public class Pessoa implements Comparable<Pessoa> {
     private String nome;
     private String cpf;
     private String data_nascimento;
@@ -40,5 +40,10 @@ public class Pessoa {
         return "Nome " + nome +
                 "\nCPF: " + cpf +
                 "\nData de nascimento: " + data_nascimento;
+    }
+
+    @Override
+    public int compareTo(Pessoa outra) {
+        return nome.compareTo(outra.nome);
     }
 }

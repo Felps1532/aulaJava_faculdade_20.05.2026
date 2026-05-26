@@ -1,11 +1,25 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class App3 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException, IOException {
         ArrayList<Pessoa> pessoas = new ArrayList<>();
 
-        pessoas.add(new Pessoa("Maria da Silva", "12345678912", "24/03/1290"));
-        pessoas.add(new Pessoa("Mariana Moraes", "11343671912", "23/09/1310"));
-        pessoas.add(new Pessoa("Maria da Silva", "21345678912", "12/12/1230"));
+        FileReader fr = new FileReader("cadastro_pessoas.csv");
+        BufferedReader br = new BufferedReader(fr);
+
+        String line = null;
+
+        br.readLine(); // lendo a primeira linha, que nesse caso é o cabeçalho
+
+        while ((line = br.readLine()) != null) {
+            System.out.println("--> " + line);
+        }
+
+        br.close();
     }
 }
